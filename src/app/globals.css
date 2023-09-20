@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: black;
+  color: #bbb;
+}
+
+a{
+  text-decoration: none;
+color: inherit;
+}
+
+button{
+  cursor: pointer;
+  border:none ;
+}
+
+.icon{
+  cursor: pointer;
+}
+
+input{
+  border: none;  
+}
+input:focus{
+  outline: none;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(-15px);
+  }
+  to {
+    transform: translateY(0px) scale(1.03);
+  }
+}
+
+
+.container{
+  max-width: 1366px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
