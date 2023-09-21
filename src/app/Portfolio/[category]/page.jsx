@@ -1,19 +1,18 @@
+"use client"
 import React from 'react';
 import styles from './category.module.css';
 import Button from '@/Components/Button/Button';
 import Image from 'next/image';
 import { items } from './data.js';
 
-
 const getdata = (cat) => {
-  const data = items(cat);
-
-  if (data) return data;
-
+  const data = items[cat]; 
+  return data || []; 
 };
 
 const Category = ({ params }) => {
-  const data = getdata(params.Category);
+  const data = getdata(params.category); 
+  
   return (
     <div className={styles.category}>
       <h1 className={styles.title}>{params.category}</h1>
@@ -26,11 +25,11 @@ const Category = ({ params }) => {
           </div>
           <div className={styles.imgcon}>
             <Image
-              alt={item.title} // Added alt attribute for accessibility
+              alt={item.title}
               src={item.image}
               className={styles.img}
-              width={300} // Specify the desired width
-              height={400} // Specify the desired height
+              width={300}
+              height={400}
             />
           </div>
         </div>

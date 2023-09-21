@@ -22,24 +22,36 @@
     height: 400px;
     position: relative;
     background-size: cover !important;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.item:nth-child(1){
-    background: url("../../../public/illustration.png");    
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position:absolute;
+    top: 0;
 }
-.item:nth-child(2){
-    background: url("../../../public/websites.jpg");    
-}
-.item:nth-child(3){
-    background: url("../../../public/apps.jpg");    
+.item:hover .img{
+    transform: scale(1.1);
+    transition: 0.5s ;
+    filter: brightness(0.3);
 }
 
-.title{
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-    font-size: 40px;
+.item:hover .title{
+   opacity: 1;
+   z-index: 1;
+   transition: 0.5s;
+}
+
+.title{    
+    font-size: 30px;
     font-weight: bold;
+    opacity: 1;
+    transition: 0.5s;        
 }
 
 .item:hover .title{
