@@ -1,0 +1,12 @@
+.blog{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container{    
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;    
+}

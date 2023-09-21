@@ -1,0 +1,44 @@
+.category{
+
+}
+
+.title{
+    color: #53c28b;
+    text-transform: uppercase;
+}
+
+.item{
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.item:nth-child(2n){
+    flex-direction: row-reverse;
+}
+
+.imgcon{
+    flex: 1;
+    height: 500px;
+    position: relative;
+}
+
+.img{
+    object-fit: cover;
+}
+.content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.content h1{
+    font-size: 50px;
+}
+
+.content p{
+    font-size: 20px;
+}

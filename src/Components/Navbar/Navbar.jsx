@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from './Navbar.module.css'
+import DarkMode from '../DarkMode/DarkMode'
 
 const Navbar = () => {
 
@@ -41,6 +42,7 @@ const Links =[
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>MYBLOG</Link>
       <div className={styles.links}>
+        <DarkMode/>
         {Links.map((link)=>(
           <Link href={link.url} key={link.id} className={styles.link}>{link.title}</Link>
         ))}
