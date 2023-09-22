@@ -1,0 +1,111 @@
+.login{    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.googlecon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    justify-content: center;    
+    cursor: pointer;
+    margin: 20px;
+}
+
+.googlecon:hover{
+    background-color: black;
+    color: white;    
+}
+.googlecon:hover .google{
+    color: white;
+}
+
+.g_img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.google{
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;    
+}
+
+.form{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input{
+    padding: 15px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.button{
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;    
+    background-color: #53c282;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;    
+}
+.button:hover{
+    background-color: #07da5f;
+}
+
+.span{        
+    font-size: 13px;
+}
+
+.link{
+    color: #53c282;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.link:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.line{
+    border: 1px solid white;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line span{
+  position: absolute;
+  top: -12px;
+  background-color: #111;
+  padding: 0 8px;
+}
