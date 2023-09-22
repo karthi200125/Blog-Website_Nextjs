@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;    
+    
 }
 .logo{
    font-weight: bold;
@@ -13,6 +14,16 @@
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.link{    
+    padding: 10px;
+    border-radius: 10px;    
+}
+.link:hover{
+    background-color: #53c28b;
+     color: white;
+     transition: 0.5s ease-in-out;
 }
 
 .logout{
