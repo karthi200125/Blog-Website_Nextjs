@@ -3,7 +3,7 @@ import styles from './blogpost.module.css'
 import Image from 'next/image'
 
 async function getdata(id){
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+  const res = await fetch(`http://localhost:3000/api/posts/${id}`)
  
   if(!res.ok){
    throw new Error('failed ti fetch data')
@@ -11,6 +11,13 @@ async function getdata(id){
   return res.json();
  }
  
+ export async function generateMetadata({params}){
+  const post =await getdata(params.id)
+  return{
+    title:post.title,
+    description:post.desc
+  }
+ }
 
 const BlogPost =async ({params}) => {
 
@@ -21,28 +28,33 @@ const BlogPost =async ({params}) => {
         <div className={styles.info}>
           <h1 className={styles.title}>{data.title}</h1>
           <p className={styles.desc}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, exercitationem!
+            {data.desc}
           </p>
           <div className={styles.author}>
             <Image
-              src=""
-              alt=""
+              src={data.img}
+              alt="post image"
               width={40}
               height={40}
               className={styles.avatar}
             />
-            <span className={styles.username}>Jhon</span>
+            <span className={styles.username}>{data.username}</span>
           </div>
         </div>
         <div className={styles.imageContainer}>
           <Image
-            src=""
+            src={data.img}
             alt=""
             fill={true}
             className={styles.image}
           />
         </div>
       </div>      
+      <div className={styles.content}>
+        <p className={styles.text}>
+         {data.content}
+        </p>
+      </div>
     </div>
   )
 }
