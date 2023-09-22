@@ -5,9 +5,10 @@ import Button from "@/Components/Button/Button";
 
 
 export const metadata = {
-  title: "Lama Dev Contact Information",
-  description: "This is Contact Page",
-};
+  title: 'WebCreateInk Contact',
+  description: 'WebCreateInk Contact',
+}
+
 
 const Contact = () => {
   return (

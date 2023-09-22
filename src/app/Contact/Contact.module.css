@@ -1,5 +1,5 @@
-.contact{
-
+.contact{    
+    
 }
 
 .title{
@@ -11,7 +11,7 @@
 .content{
     display: flex;
     gap: 100px;
-    align-items: center;
+    align-items: center;    
 }
 
 .imgContainer{
@@ -43,10 +43,10 @@
 }
 
 .input , .textArea{
-    padding: 20px;
+    padding: 15px;
     background-color: transparent;
     color: #bbb;
-    border: 3px solid #bbb;
-    font-size: 20px;
+    border: 1px solid #bbb;
+    font-size: 15px;
     font-weight: bold;
 }
